@@ -1,0 +1,15 @@
+<div class="row g-4 mb-4">
+  <div
+    class="col-12 col-md-6 col-xl-3"
+    *ngFor="let kpi of kpis"
+  >
+    <div
+      class="dashboard-card clickable"
+      [routerLink]="kpi.route"
+    >
+      <div class="card-title">{{ kpi.title }}</div>
+      <div class="card-value">{{ kpi.value }}</div>
+      <small class="text-muted">{{ kpi.subtitle }}</small>
+    </div>
+  </div>
+</div>

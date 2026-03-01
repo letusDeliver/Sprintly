@@ -1,0 +1,44 @@
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #ffffff;
+  padding: 1rem 0;
+}
+
+/* Same width system as page-wrapper */
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.root-menu, .menu-icons{
+  color: #334155 !important;
+}
+
+:host ::ng-deep .p-megamenu-horizontal .p-megamenu-root-list {
+  gap: 1.5rem !important;
+}
+
+:host ::ng-deep p-megamenu-item-content {
+  cursor: pointer !important;
+}
+
+:host ::ng-deep .p-megamenu-submenu-label {
+  padding: 0px !important;
+}
+@media (max-width: 992px) {
+  .header-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+}
+

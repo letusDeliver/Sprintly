@@ -1,0 +1,32 @@
+<div class="dashboard">
+  <!-- Welcome -->
+  <div class="welcome-section mb-4">
+    <h4 class="fw-semibold">Welcome back, Kunal 👋</h4>
+    <p class="text-muted mb-0">Here’s your productivity overview</p>
+  </div>
+
+  <!-- KPI -->
+  <app-kpi-cards></app-kpi-cards>
+
+  <!-- Middle Row -->
+  <div class="row g-4 mb-4">
+    <div class="col-12 col-xl-6">
+     <app-recent-tickets></app-recent-tickets>
+    </div>
+
+    <div class="col-12 col-xl-6">
+      <app-recent-tasks></app-recent-tasks>
+    </div>
+  </div>
+
+  <!-- Bottom Row -->
+  <div class="row g-4">
+    <div class="col-12 col-xl-6">
+      <app-recent-projects></app-recent-projects>
+    </div>
+
+    <div class="col-12 col-xl-6">
+      <app-productivity-chart></app-productivity-chart>
+    </div>
+  </div>
+</div>

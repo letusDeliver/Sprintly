@@ -1,0 +1,78 @@
+<header class="app-header" role="banner">
+  <nav class="py-2" role="navigation" aria-label="Main Navigation">
+      <div class="header-container">
+
+        <p-megamenu
+          [model]="items"
+          class="w-100 d-flex align-items-center justify-content-between px-4 py-2 rounded-pill shadow-sm bg-white"
+        >
+    
+          <!-- Logo -->
+          <ng-template #start>
+            <div class="d-flex align-items-center gap-2 me-4">
+              <span class="fw-bold fs-5 ms-2">Sprintly</span>
+            </div>
+          </ng-template>
+    
+          <!-- Menu Items -->
+          <ng-template #item let-item>
+    
+            <!-- ROOT ITEM -->
+            <a
+              *ngIf="item.root"
+              pRipple
+              [routerLink]="item.routerLink"
+              routerLinkActive="active-menu"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="d-flex align-items-center px-3 py-2 fw-semibold text-decoration-none"
+              style="border-radius: 2rem;"
+            >
+              <i [ngClass]="item.icon" class="me-1"></i>
+              <span>{{ item.label }}</span>
+            </a>
+    
+            <!-- SUB MENU ITEM -->
+            <a
+              *ngIf="!item.root && !item.image"
+              [routerLink]="item.routerLink"
+              routerLinkActive="active-submenu"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="d-flex align-items-center gap-2 p-2 text-decoration-none"
+            >
+              <span
+                class="d-flex align-items-center justify-content-center rounded-circle"
+              >
+                <i [ngClass]="item.icon" class="menu-icons"></i>
+              </span>
+    
+              <div class="d-flex flex-column">
+                <span class="fw-semibold root-menu">
+                  {{ item.label }}
+                </span>
+              </div>
+            </a>
+    
+            <!-- IMAGE BLOCK -->
+            <div *ngIf="item.image" class="d-flex flex-column gap-3 p-3">
+              <img [src]="item.image" alt="megamenu-demo" class="img-fluid rounded" />
+              <p-button [label]="item.label" [outlined]="true"></p-button>
+            </div>
+    
+          </ng-template>
+    
+          <!-- Avatar -->
+          <ng-template #end>
+            <div class="d-flex align-items-center">
+              <p-avatar
+                image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+                shape="circle"
+              />
+            </div>
+          </ng-template>
+    
+        </p-megamenu>
+      </div>
+
+
+  </nav>
+</header>

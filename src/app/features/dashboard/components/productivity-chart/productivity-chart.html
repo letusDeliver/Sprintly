@@ -1,0 +1,25 @@
+<div class="dashboard-card">
+
+  <div class="section-header">
+    <span>Overall Productivity</span>
+
+<p-select
+  [options]="ranges"
+  [(ngModel)]="selectedRange"
+  optionLabel="label"
+  optionValue="value"
+  (onChange)="onRangeChange()"
+  style="width: 150px"
+>
+</p-select>
+  </div>
+
+  <div class="chart-wrapper">
+    <p-chart
+      type="line"
+      [data]="chartData"
+      [options]="chartOptions"
+    ></p-chart>
+  </div>
+
+</div>

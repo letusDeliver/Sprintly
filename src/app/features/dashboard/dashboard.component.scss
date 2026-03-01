@@ -1,0 +1,37 @@
+.dashboard {
+  padding: 2rem;
+  background: #ffff;
+  min-height: 100vh;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .dashboard {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .dashboard {
+    padding: 1rem;
+  }
+    .row {
+    margin-bottom: 0.75rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .dashboard {
+    padding-top: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-section {
+    margin-bottom: 1rem;
+  }
+
+  .welcome-section h4 {
+    font-size: 1.2rem;
+  }
+}

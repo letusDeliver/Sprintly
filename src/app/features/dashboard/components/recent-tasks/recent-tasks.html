@@ -1,0 +1,42 @@
+<div class="dashboard-card">
+
+  <div class="section-header">
+    <span>Recent Tasks</span>
+    <a routerLink="/tasks">View All</a>
+  </div>
+
+  <div
+    class="task-row"
+    *ngFor="let task of tasks"
+    (click)="navigateToTask(task.id)"
+  >
+    <div class="task-info">
+      <div class="task-title">
+        #{{ task.id }} — {{ task.title }}
+      </div>
+
+      <div class="task-meta-text">
+        Project: {{ task.projectId }}
+        •
+        <span class="task-priority" [ngClass]="task.priority">
+          {{ task.priority }}
+        </span>
+      </div>
+    </div>
+
+    <div class="task-status">
+      <span
+        class="status-badge"
+        [ngClass]="task.status"
+      >
+        {{ formatStatus(task.status) }}
+      </span>
+
+      <small *ngIf="task.dueDate">
+        Due: {{ task.dueDate | date:'dd MMM' }}
+      </small>
+    </div>
+
+  </div>
+
+</div>

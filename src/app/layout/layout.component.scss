@@ -1,0 +1,24 @@
+.layout {
+  background: #ffff;
+  min-height: 100vh;
+}
+
+/* Shared width wrapper */
+.page-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  
+}
+
+@media (max-width: 992px) {
+  .page-wrapper {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-wrapper {
+    padding: 1rem;
+  }
+}

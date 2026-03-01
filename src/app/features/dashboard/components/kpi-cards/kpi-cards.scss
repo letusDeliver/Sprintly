@@ -1,0 +1,50 @@
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.dashboard-card.clickable {
+  cursor: pointer;
+}
+
+.dashboard-card.clickable:hover {
+  transform: translateY(-4px);
+}
+
+.card-title {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #0f172a;
+}
+
+/* Mobile optimization */
+@media (max-width: 576px) {
+
+  .dashboard-card {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .card-title {
+    font-size: 0.8rem;
+  }
+
+  .card-value {
+    font-size: 1.6rem;
+    margin: 0.25rem 0;
+  }
+
+  small {
+    font-size: 0.75rem;
+  }
+
+}

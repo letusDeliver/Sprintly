@@ -1,0 +1,42 @@
+<div class="dashboard-card">
+
+  <div class="section-header">
+    <span>Recent Tickets</span>
+    <a routerLink="/tickets">View All</a>
+  </div>
+
+  <div
+    class="ticket-row"
+    *ngFor="let ticket of tickets"
+    (click)="navigateToTicket(ticket.id)"
+  >
+    <div class="ticket-info">
+      <div class="ticket-title">
+        #{{ ticket.id }} — {{ ticket.title }}
+      </div>
+
+      <div class="ticket-meta-text">
+        <span class="ticket-type">{{ ticket.type }}</span>
+        •
+        <span class="ticket-priority" [ngClass]="ticket.priority">
+          {{ ticket.priority }}
+        </span>
+      </div>
+    </div>
+
+    <div class="ticket-status">
+      <span
+        class="status-badge"
+        [ngClass]="ticket.status"
+      >
+        {{ formatStatus(ticket.status) }}
+      </span>
+
+      <small>
+        {{ ticket.createdAt | date:'dd MMM' }}
+      </small>
+    </div>
+
+  </div>
+
+</div>
